@@ -19,7 +19,15 @@ The set of filter functions which would be utlized for this print job (test case
 The test program emulates an IPP printer with the properties defined in the test cases and attempts to test it by calling `cfFilterUniversal()`. The logs of the test case is then redirected to `Test_summary.txt`. These test cases are summarised based on bug reports on OpenPrinitng. Failure of any of the test cases returns a non-zero exit status from the tester executable, which ultimately fails the `make check`.
 
 #### Github Actions
-`.github/workflows/build.yml` builds ubuntu-latest and installs all the necessary libraries needed for libcupsfilters. Future contributers could also use it as a heads-up on the libraries needed for libcupsfilters and their sources. The build essentially runs `make check` on ubuntu-latest.
+`.github/workflows/build.yml` builds ubuntu-latest and installs all the necessary libraries needed for libcupsfilters. Future contributers could also use it as a heads-up on the libraries needed for libcupsfilters and their sources. The build essentially runs `make check` on ubuntu-latest. Libcupsfilters complete test suite is done.
+
+### Test Suite for cpdb-libs
+The Common Print Dialog Backends (CPDB) project of OpenPrinting is about separating the print dialogs of different GUI toolkits and applications (GTK, Qt, LibreOffice, Firefox, Chromium, ...) from the different print technologies (CUPS/IPP, cloud printing services, ...) so that they can get developed independently and so always from all applications one can print with all print technologies and changes in the print technologies get supported quickly.
+
+I attempted to combine the autopkgtest test for Debian which Till uses, with already present `make check` for cpdb-libs. The autopkgtest in Debian takes use of system files, which needs sudo permissions when used in Ubuntu. Hence for security reasons we needed to configure these tests to work without root permissions and think of possibe workaround for necessary tests. Build of these tests is still in progress.
+
+#### Misc
+During my work, I faced few petty issues which I think could be helpful for new contributers of openPrinting. I kept a compilation of these issues and their solutions in this [doc](https://docs.google.com/document/d/1BiPURRAOFpUP2EnR-Uk8JYL2L30MflEZiFIOMRWnHL8/edit?usp=sharing)
 
 ###### Acknowledgements
 I would like to express my sincere vote of thanks to my mentors, Till (`till [dot] kamppeter [at] gmail [dot] com`) and Deepak (`patankardeepak04 [at] gmail [dot] com`), for being extremely supportive throughout the project. I would like to express my gratitude to Aveek Basu (`basu [dot] aveek [at] gmail [dot] com`).
