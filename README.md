@@ -26,8 +26,10 @@ The Common Print Dialog Backends (CPDB) project of OpenPrinting is about separat
 
 I attempted to combine the autopkgtest test for Debian which Till uses, with already present `make check` for cpdb-libs. The autopkgtest in Debian takes use of system files, which needs sudo permissions when used in Ubuntu. Hence for security reasons we needed to configure these tests to work without root permissions and think of possibe workaround for necessary tests. Build of these tests is still in progress.
 
+Latest commit for [cpdb-libs tests](https://github.com/pranjanpr/cpdb-libs/tree/ci23) 
+
 #### Misc
-During my work, I faced few petty issues which I think could be helpful for new contributers of openPrinting. I kept a compilation of these issues and their solutions in this [doc](https://docs.google.com/document/d/1BiPURRAOFpUP2EnR-Uk8JYL2L30MflEZiFIOMRWnHL8/edit?usp=sharing)
+During my work, I faced few petty issues which I think could be helpful for new contributers of openPrinting. I kept a compilation of these issues and their solutions in this [Common Issues](https://docs.google.com/document/d/1BiPURRAOFpUP2EnR-Uk8JYL2L30MflEZiFIOMRWnHL8/edit?usp=sharing)
 
 ###### Acknowledgements
 I would like to express my sincere vote of thanks to my mentors, Till (`till [dot] kamppeter [at] gmail [dot] com`) and Deepak (`patankardeepak04 [at] gmail [dot] com`), for being extremely supportive throughout the project. I would like to express my gratitude to Aveek Basu (`basu [dot] aveek [at] gmail [dot] com`).
